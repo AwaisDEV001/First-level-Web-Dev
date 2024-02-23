@@ -1,0 +1,177 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: white;
+}
+body{
+    height: 100%;
+    width: 100%;
+}
+#corsor{
+    height: 20px;
+    width: 20px;
+    background-color: #95c11e;
+    position: fixed;
+    border-radius: 50%;
+    z-index:99;
+}
+#corsor-blur{
+    height: 400px;
+    width: 400px;
+    background-color: #96c11e7a;
+    position: fixed;
+    border-radius: 50%;
+    filter: blur(50px);
+    z-index: 9;
+}
+#nav{
+    position: fixed;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    padding: 0px 120px;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    z-index:99;
+}
+#nav img {
+    height: 60px;
+}
+#navbutton{
+    margin-left: 100px;
+    
+}
+div button{
+    height: 45px;
+    width: 150px;
+    background-color: black;
+    border: 3px solid wheat;
+    border-radius: 30px;
+    margin-left: 1.9px;
+}
+
+/* nav barr finish */
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    z-index: 10;
+}
+#page1 h1{
+    font-size: 100px;
+    font-weight: 800;
+    position: relative;
+}
+#page1 h1::before{
+    content: "EAT. DRINK. PLAY.";
+    position: absolute ;
+    color: black;
+    top: -4px ;
+    left: -4px;
+    -webkit-text-stroke: 2px #95c11e;
+    z-index: -1;
+}
+#page1 h5{
+    font-size: 20px;
+    font-weight: 800;
+}
+#page1 h6{
+    font-size: 10px;
+    font-weight:400;
+    width: 500px;
+    text-align: center;
+}
+
+#page2{
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow-x:auto ;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 15s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+#scroller h3{
+    display: inline-block;
+    font-size: 90px;
+    font-weight: 800;
+    margin-right: 10px;
+    color: transparent;
+    transition: all linear 0.5s;
+    -webkit-text-stroke: 2px #95c11e;
+}
+
+@keyframes scroll{
+    from{
+        transform: translatex(0);
+    }
+    to{
+        transform: translatex(-100%);
+    }
+}
+#scroller h3:hover{
+   color: #95c11e;
+}
+
+#ablut-us{
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 40px;
+    position: relative;
+    z-index: 10;
+}
+#ablut-us h3{
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+#ablut-us p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+}
+#ablut-us img{
+    height: 200px;
+    width: 200px;
+}
+#ablut-us-in{
+    width: 500px;
+}
